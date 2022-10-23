@@ -1,10 +1,166 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Base page</title>
-</head>
-<body>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+        <title>FOOD</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="nav">
+                    <img src="{% static 'img/logo.svg' %}" alt="FOOD" height="50px" width="50px">
+                    <p class="name">FOOD</p>
+                    <ul class="menu">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <div class="person">
+                        <img src="{% static 'img/person.svg' %}" height="28px" width="28px">
+                    </div>
+                </div>  
+            </div>
+        </header>
 
-</body>
+        <main class="main">
+            <div class="container">
+                <div class="diet">
+                    <h1 class="h1">Рацион</h1>
+                    <div class="day">
+                        <!-- Кнопка смена дня -->
+                    </div>
+                    <div class="table-container">
+                        <div class="table-caption">
+                            <img src="{% static 'img/apple.png' %}">
+                            <p>Завтрак</p>
+                        </div>
+                        <table class="table">
+                            <thead class="table-header">
+                                <tr>
+                                    <th scope="col">Название</th>
+                                    <th scope="col">Грамм</th>
+                                    <th scope="col">Ккал</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Творожно-банановые оладьи</td>
+                                    <td>230</td>
+                                    <td>330</td>
+                                </tr>
+                                <tr>
+                                    <td>Хлеб зерновой</td>
+                                    <td>70</td>
+                                    <td>160</td>
+                                </tr>
+                                <tr>
+                                    <td>Творожный сыр Almette</td>
+                                    <td>35</td>
+                                    <td>94</td>
+                                </tr>
+                                <tr class="last-tr">
+                                    <td>Куриная грудка</td>
+                                    <td>50</td>
+                                    <td>57</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-caption">
+                            <img src="{% static 'img/cabbage.png' %}">
+                            <p>Обед</p>
+                        </div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Шашлык из филе бедра Волков</td>
+                                    <td>300</td>
+                                    <td>607</td>
+                                </tr>
+                                <tr class="last-tr">
+                                    <td>Гречка Мистраль</td>
+                                    <td>85</td>
+                                    <td>298</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-caption">
+                            <img src="{% static 'img/grape.png' %}">
+                            <p>Ужин</p>
+                        </div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Творог 9%</td>
+                                    <td>200</td>
+                                    <td>318</td>
+                                </tr>
+                                <tr>
+                                    <td>Сметана 15%</td>
+                                    <td>50</td>
+                                    <td>81</td>
+                                </tr>
+                                <tr class="last-tr">
+                                    <td>Куриная грудка</td>
+                                    <td>100</td>
+                                    <td>113</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="second-column">
+                    <div class="food-container">
+                        <h2 class="h1">Продукты</h2>
+                        <div class="day">
+                            <!-- Количество дней -->
+                        </div>
+                        <div class="btn-list">
+                            <p>Посмотреть список</p>
+                        </div>
+                    </div>
+                    <div class="about-diet">
+                        <h3 class="h1">О диете</h3>
+                        <div class="diet-data">
+                            <div class="calories">
+                                <img src="{% static 'img/calories-icon.svg' %}">
+                                <p class="name-data">Общий ккал</p>
+                                <p class="value">2057</p>
+                            </div>
+                            <div class="proteins">
+                                <img src="{% static 'img/chicken-icon.svg' %}">
+                                <p class="name-data">Белки</p>
+                                <p class="value">141</p>
+                            </div>
+                            <div class="oil">
+                                <img src="{% static 'img/oil-icon.svg' %}">
+                                <p class="name-data">Жиры</p>
+                                <p class="value">96</p>
+                            </div>
+                            <div class="carbohydrates">
+                                <img src="{% static 'img/bread-icon.svg' %}">
+                                <p class="name-data">Углеводы</p>
+                                <p class="value">148</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                
+            </div>
+        </footer>
+    </body>
 </html>
