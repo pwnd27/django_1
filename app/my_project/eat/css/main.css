@@ -1,0 +1,283 @@
+html {
+    box-sizing: border_box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    background-color: #2B2B46;
+    background-image: url(../img/background-orange.png);
+    background-repeat: no-repeat;
+    background-position: 748px 370px;
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+header a {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    margin-left: 175px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.menu li {
+    margin-left: 65px;
+}
+
+.menu li:nth-child(1) {
+    margin-left: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-top: 67px;
+    margin-bottom: 100px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #303150;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.diet {
+    width: 740px;
+    background-color: #303150;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding-bottom: 35px;
+}
+
+.h1 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 33px;
+    margin: 0 0 0 60px;
+}
+
+.day {
+    width: 135px;
+    height: 40px;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-right: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.table-container {
+    width: 670px;
+    background-color: #2B2B46;
+    margin-left: 35px;
+    margin-top: 35px;
+    border-radius: 10px;
+}
+
+.table-caption {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 127px;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 30px;   
+}
+
+.table-caption p {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.table {
+    width: 594px;
+    margin-left: 38px;
+    margin-top: 20px;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead th:nth-child(1), tbody td:nth-child(1) {
+    width: 60%;
+  }
+  
+thead th:nth-child(2), tbody td:nth-child(2) {
+    width: 20%;
+  }
+  
+thead th:nth-child(3), tbody td:nth-child(3) {
+    width: 20%;
+    text-align: end;
+  }
+
+.table-header th {
+    text-align: left;
+  }
+
+.table th {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+.table td {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #BDBDCB;
+    border-bottom: 1px solid #7E7F90;
+  }
+
+.last-tr td {
+    border-bottom: none;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 190px;
+    background-color: #303150;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.food-container .day {
+    margin-right: 35px;
+    padding: 0;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    height: 1143px;
+}
+
+.second-column .h1 {
+    margin: 0 0 0 35px;
+}
+
+.btn-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 41px;
+    margin-bottom: 30px;
+    width: 280px;
+    height: 55px;
+    background: #69ADFF;
+    border-radius: 5px;
+}
+
+.btn-list p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.about-diet {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 420px;
+    margin-left: 30px;
+    margin-top: auto;
+    background: #303150;
+    border-radius: 10px;
+}
+
+.diet-data {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.calories, .proteins, .oil, .carbohydrates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    height: 120px;
+    background: #61D6DE;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+.proteins {
+    background: #D0BFF5;
+}
+
+.oil {
+    background: #F8A4C7;
+}
+
+.carbohydrates {
+    background: #99C4F7;
+}
+
+.diet-data p {
+    padding: 5px;
+}
+
+.name-data {
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.value {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
