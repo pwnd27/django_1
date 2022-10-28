@@ -22,26 +22,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Творожно-банановые оладьи</td>
-                        <td>230</td>
-                        <td>330</td>
-                    </tr>
-                    <tr>
-                        <td>Хлеб зерновой</td>
-                        <td>70</td>
-                        <td>160</td>
-                    </tr>
-                    <tr>
-                        <td>Творожный сыр Almette</td>
-                        <td>35</td>
-                        <td>94</td>
-                    </tr>
-                    <tr class="last-tr">
-                        <td>Куриная грудка</td>
-                        <td>50</td>
-                        <td>57</td>
-                    </tr>
+                    {% for meal in breakfast %}
+                        {% include 'diet/includes/table_data_meal.html' %}
+                    {% endfor %}   
                 </tbody>
             </table>
         </div>
@@ -52,16 +35,9 @@
             </div>
             <table class="table">
                 <tbody>
-                    <tr>
-                        <td>Шашлык из филе бедра Волков</td>
-                        <td>300</td>
-                        <td>607</td>
-                    </tr>
-                    <tr class="last-tr">
-                        <td>Гречка Мистраль</td>
-                        <td>85</td>
-                        <td>298</td>
-                    </tr>
+                    {% for meal in lunch %}
+                        {% include 'diet/includes/table_data_meal.html' %}
+                    {% endfor %}                    
                 </tbody>
             </table>
         </div>
@@ -72,21 +48,9 @@
             </div>
             <table class="table">
                 <tbody>
-                    <tr>
-                        <td>Творог 9%</td>
-                        <td>200</td>
-                        <td>318</td>
-                    </tr>
-                    <tr>
-                        <td>Сметана 15%</td>
-                        <td>50</td>
-                        <td>81</td>
-                    </tr>
-                    <tr class="last-tr">
-                        <td>Куриная грудка</td>
-                        <td>100</td>
-                        <td>113</td>
-                    </tr>
+                    {% for meal in supper %}
+                        {% include 'diet/includes/table_data_meal.html' %}
+                    {% endfor %}   
                 </tbody>
             </table>
         </div>
@@ -107,22 +71,22 @@
                 <div class="calories">
                     <img src="{% static 'img/calories-icon.svg' %}">
                     <p class="name-data">Общий ккал</p>
-                    <p class="value">2057</p>
+                    <p class="value">{{ info.calories__sum|floatformat:'0' }}</p>
                 </div>
                 <div class="proteins">
                     <img src="{% static 'img/chicken-icon.svg' %}">
                     <p class="name-data">Белки</p>
-                    <p class="value">141</p>
+                    <p class="value">{{ info.proteins__sum|floatformat:'0' }}</p>
                 </div>
                 <div class="oil">
                     <img src="{% static 'img/oil-icon.svg' %}">
                     <p class="name-data">Жиры</p>
-                    <p class="value">96</p>
+                    <p class="value">{{ info.fats__sum|floatformat:'0' }}</p>
                 </div>
                 <div class="carbohydrates">
                     <img src="{% static 'img/bread-icon.svg' %}">
                     <p class="name-data">Углеводы</p>
-                    <p class="value">148</p>
+                    <p class="value">{{ info.carbs__sum|floatformat:'0' }}</p>
                 </div>
             </div>
         </div>

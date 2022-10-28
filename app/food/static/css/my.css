@@ -87,6 +87,7 @@ header a {
 
 .diet {
     width: 740px;
+    margin-bottom: auto;
     background-color: #303150;
     display: flex;
     flex-wrap: wrap;
@@ -113,10 +114,12 @@ header a {
 
 .table-container {
     width: 670px;
+    margin-bottom: auto;
     background-color: #2B2B46;
     margin-left: 35px;
     margin-top: 35px;
     border-radius: 10px;
+    padding-bottom: 5px;
 }
 
 .table-caption {
@@ -176,9 +179,9 @@ thead th:nth-child(3), tbody td:nth-child(3) {
     border-bottom: 1px solid #7E7F90;
   }
 
-.last-tr td {
+.table tr:last-child td {
     border-bottom: none;
-}
+  }
 
 .food-container {
     display: flex;

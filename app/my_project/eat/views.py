@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import GeneratedMeals
 
 
 # Create your views here.
-def to_eat(request):
+def show_diet(request):
+
     return render(request, 'eat/index.html')
