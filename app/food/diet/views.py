@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Sum
-from .models import Meal
+from .models import Meal, Ingredient
 
 
 
@@ -23,3 +23,9 @@ def show_diet(request):
     }
 
     return render(request, 'diet/index.html', context=context)
+
+def show_ingredients(request):
+    
+    ingredients = Ingredient.objects.all()
+
+    return render(request, 'diet/ingredients.html', context={'ingredients': ingredients})
