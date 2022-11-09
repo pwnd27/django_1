@@ -102,7 +102,17 @@ header a {
     margin: 0 0 0 60px;
 }
 
+.h2 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 33px;
+    margin: 0 0 0 35px;
+}
+
 .day {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 135px;
     height: 40px;
     margin-left: auto;
@@ -296,7 +306,53 @@ thead th:nth-child(3), tbody td:nth-child(3) {
     border-bottom: none;
   }
 
-.table-ingredients {
-    width: 970px;
+.table-container-ingredient {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
     height: auto;
+    background-color: #303150;
+    margin-left: 300px;
+    border-radius: 10px;
+}
+
+.table-ingredient {
+    margin-left: 35px;
+    margin-top: 35px;
+    margin-right: 35px;
+}
+
+.table-ingredient-header th{
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.table-ingredient-header th:nth-child(1), tbody td:nth-child(1) {
+    width: 50%;
+  }
+
+.table-ingredient-header th:nth-child(2), tbody td:nth-child(2) {
+    width: 50%;
+    width: auto;
+    text-align: end;
+  }
+
+.table-ingredient td {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #BDBDCB;
+    border-bottom: 1px solid #7E7F90;
+  }
+
+.table-ingredient tr:last-child td {
+    border-bottom: none;
+  }
+
+.change-day {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }

@@ -2,6 +2,24 @@
 
 {% load static %}
 
-<div class='table-ingredients'>
-    
+{% block content %}
+<div class='table-container-ingredient'>
+    <table class='table-ingredient'>
+        <h1 class="h2">Продукты</h1>
+        <thead class="table-ingredient-header">
+            <tr>
+                <th scope="col">Название</th>
+                <th scope="col">Грамм</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingredient in ingredients %}
+            <tr>
+                <td>{{ ingredient.ingredient.name }}</td>
+                <td>{{ ingredient.ingredient_weigth }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
+{% endblock content %}
