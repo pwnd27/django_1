@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class='container-update-user'>
+    <h2 class='h1'>Настройки</h2>
+    <form method='post'>
+        {% csrf_token %}
+        <p>{{ form.age.label }}</p>
+        {{ form.age }}
+        <p>{{ form.target.label }}</p>
+        {{ form.target }}
+        <input type='submit' value='Сохранить'>
+    </form>
+</div>
+{% endblock %}

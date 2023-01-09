@@ -19,7 +19,7 @@ from django.urls import include
 from .views import redirect_diet
 
 urlpatterns = [
-    path('', redirect_diet),
+    path('', redirect_diet, name='home'),
     path('admin/', admin.site.urls),
     path('diet/', include('diet.urls'))
 ]

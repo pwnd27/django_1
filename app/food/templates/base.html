@@ -17,18 +17,36 @@
                     <img src="{% static 'img/logo.svg' %}" alt="FOOD" height="50px" width="50px">
                     <p class="name">FOOD</p>
                     <ul class="menu">
-                        <li><a href="#">Главная</a></li>
+                        <li><a href="{% url 'diet_url' %}">Главная</a></li>
                         <li><a href="#">Статьи</a></li>
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Контакты</a></li>
-                    </ul>
-                    <div class="person">
-                        <img src="{% static 'img/person.svg' %}" height="28px" width="28px">
-                    </div>
+                    </ul>  
+                    {% if user.is_authenticated %}
+                        <div class='person-wrapper'>
+                            <button type='button' class="person">
+                                <img src="{% static 'img/person.svg' %}" height="28px" width="28px">
+                            </button>
+                            <div class='menu-person'>
+                                <div class='menu-link-wrapper'>
+                                    <div class='menu-button'>
+                                        <a href="{% url 'update_user_url' %}" class='menu-person-link'>Настройки</a>
+                                    </div>
+                                    <div class='menu-button'>
+                                        <a href="{% url 'logout' %}" class='menu-person-link'>Выйти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class='sign'>
+                            <a href="{% url 'login' %}">Войти</a>
+                            <a href="{% url 'signup' %}">Регистрация</a>
+                        </div>
+                    {% endif %}            
                 </div>  
             </div>
         </header>
-
         <main class="main">
             <div class="container">
                 {% block content  %}

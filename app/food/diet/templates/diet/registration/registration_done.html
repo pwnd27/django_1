@@ -1,0 +1,5 @@
+{% load static %}
+{% block content %}
+    <h3> Привет, {{ new_user.username }}!</h3>
+    <p> Твой аккаунт успешно создан. <a href="{% url 'login' %}">Войти</a>
+{% endblock %}

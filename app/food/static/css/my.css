@@ -7,6 +7,7 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     letter-spacing: 0.02em;
@@ -37,6 +38,7 @@ header a {
 
 .menu {
     display: flex;
+    margin-top: 13px;
     margin-left: 175px;
 }
 
@@ -56,16 +58,21 @@ header a {
 
 .nav {
     display: flex;
-    align-items: center;
-    margin-top: 67px;
+    align-items: start;
+    margin-top: 65px;
     margin-bottom: 100px;
 }
 
 .name {
     font-size: 20px;
+    margin-top: 13px;
     font-weight: 800;
     text-transform: uppercase;
     margin-left: 20px;
+}
+
+.person-wrapper {
+    margin-left: auto;
 }
 
 .person {
@@ -76,7 +83,59 @@ header a {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: none;
+    padding: 0;
+    background-color: #2B2B46;
+}
+
+.person:hover {
     background-color: #303150;
+    cursor: pointer;
+    border: none;
+}
+
+.menu-person {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 375px;
+    background-color: #373857;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+._active {
+    display: flex;
+}
+
+.menu-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-button {
+    display: flex;
+    border-radius: 10px;
+    width: 120px;
+    height: auto;
+    padding: 0;
+}
+
+.menu-button:hover {
+    background-color: #3D3E5D;
+}
+
+.menu-person-link {
+    text-decoration: none;
+    padding: 10px;
+    margin-left: auto;
 }
 
 .main .container {
@@ -356,3 +415,50 @@ thead th:nth-child(3), tbody td:nth-child(3) {
     background-color: transparent;
     cursor: pointer;
 }
+
+.sign {
+    margin-left: auto;
+}
+
+.container-update-user {
+    width: 570px;
+    height: auto;
+    margin-left: 300px;
+}
+
+.container-update-user h2 {
+    margin: 0;
+}
+
+.field {
+    width: 270px;
+    height: 55px;
+    background-color: #303150;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.field:hover, .field:focus {
+    background-color: #373857;
+    outline: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

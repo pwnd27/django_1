@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+AUTH_USER_MODEL = 'diet.User'
 
 # Application definition
 
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'food.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR/'templates', BASE_DIR/'diet/templates/diet'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
